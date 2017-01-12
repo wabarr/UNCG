@@ -1,0 +1,13 @@
+---
+---
+
+## UNCG Workshop
+
+
+### Topics to be covered
+
+*  R language basics
+*  data types
+*  reading data into R
+*  ggplot2
+*  dplyr

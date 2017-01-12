@@ -1,0 +1,13 @@
+name: "UNCG R Workshop"
+navbar:
+  title: "UNCG R Workshop"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Data"
+      href: datasets.html
+output:
+  html_document:
+    theme: journal
+    highlight: textmate
+    css: styles.css
