@@ -4,8 +4,11 @@
 ## UNCG Workshop
 
 
-### Topics to be covered
+### Schedule
 
+Session | Topic
+-----------------|------------
+Introduction to R|[presentation](/presentations/intro2R.html)
 *  R language basics
 *  data types
 *  reading data into R
