@@ -1,4 +1,5 @@
 name: "UNCG R Workshop"
+output_dir: "."
 navbar:
   title: "UNCG R Workshop"
   left:
