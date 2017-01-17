@@ -8,9 +8,8 @@
 
 Session | Topic
 -----------------|------------
-Introduction to R|[presentation](/presentations/intro2R.html)
-*  R language basics
-*  data types
-*  reading data into R
-*  ggplot2
-*  dplyr
+Thursday Morning|[Intro to R](/presentations/intro2R.html)
+Thursday | ggplot2 
+Thursday | dplyr 
+Friday | linear modeling 
+Friday | PGLS 
