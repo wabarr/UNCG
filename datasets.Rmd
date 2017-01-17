@@ -3,4 +3,7 @@
 
 ## Datasets
 
-[femur_lengths](/datasets/femur_lengths.txt)
+name  | source
+---------------|-----------------
+[femur_lengths](/datasets/femur_lengths.txt) | fake data
+`babynames` | built in dataset, data from Social Security Administration

@@ -1,10 +1,7 @@
 ---
 ---
 
-## UNCG Workshop
-
-
-### Schedule
+## Schedule
 
 Session | Topic
 -----------------|------------
