@@ -11,9 +11,10 @@ title: "dplyr and ggplot2 challenge"
 library(babynames)
 library(ggplot2)
 library(dplyr)
+theme_set(theme_bw(18))
 babynames %>% 
   filter(sex=="M", name=="Andrew") %>%
   ggplot(aes(x=year, y=prop)) + 
-  geom_line() + 
+  geom_line(color="#70a6ff", size=2) + 
   labs(title="Popularity of the name Andrew through time")
 ```
