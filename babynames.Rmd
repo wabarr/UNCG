@@ -1,0 +1,19 @@
+---
+title: "dplyr and ggplot2 challenge"
+---
+
+### Break into groups of 2 and complete the challenge
+
+* Install the babynames package, and load it
+* Recreate the graph below for your own name
+
+```{r message=F, warning=F, echo=F}
+library(babynames)
+library(ggplot2)
+library(dplyr)
+babynames %>% 
+  filter(sex=="M", name=="Andrew") %>%
+  ggplot(aes(x=year, y=prop)) + 
+  geom_line() + 
+  labs(title="Popularity of the name Andrew through time")
+```

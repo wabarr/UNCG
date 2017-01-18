@@ -3,10 +3,12 @@
 
 ## Schedule
 
-Session | Topic
+Session | Activity
 -----------------|------------
 Thursday Morning|[Intro to R](/presentations/intro2R.html)
-Thursday | ggplot2 
-Thursday | dplyr 
-Friday | linear modeling 
-Friday | PGLS 
+Thursday Afternoon | ggplot2 
+Thursday Afternoon | dplyr 
+Thursday Afternoon | [dplyr & ggplot challenge](babynames.html)
+Friday Morning | linear modeling 
+Friday Afternoon | PGLS 
+
