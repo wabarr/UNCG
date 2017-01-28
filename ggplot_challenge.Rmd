@@ -1,0 +1,21 @@
+---
+title: "ggplot challenge"
+output: html_document
+---
+
+## Break into groups of 2 to complete the challenge
+
+Install the `fivethirtyeight` package and load it using the `library()` function
+
+### Recreate the following plot using [this dataset](http://uncg.rstats.ninja/datasets/barr_astrag_2014.txt) of astragalus measurements of antelopes 
+
+```{r echo=F}
+library(ggplot2)
+theme_set(theme_bw(16))
+astrag <- read.table("http://uncg.rstats.ninja/datasets/barr_astrag_2014.txt",header=T, sep="\t")
+
+ggplot(subset(astrag, Habitat %in% c("F", "HC", "LC", "O")), aes(B,DistRad, color=Habitat)) + 
+  geom_point() +
+  stat_smooth(method="lm", se=F) + 
+  labs(title="Astragalar Dimensions by Habitat")
+```

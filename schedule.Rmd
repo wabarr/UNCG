@@ -9,6 +9,7 @@
     *  [Using functions - basic statistical tests]()
 *  Thursday Afternoon
     *  [Data Visualization](/presentations/visualization.html)
+    *  [ggplot challenge](ggplot_challenge.html)
 *  Friday Morning
     *  data
     *  [dplyr & ggplot challenge](babynames.html)
