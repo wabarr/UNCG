@@ -3,3 +3,8 @@ output: html_document
 ---
 
 ## Welcome to the workshop
+
+![](favicon.ico)
+
+The goal of this workshop is to provide you with basic R skills, emphasizing comparative methods.  At the end of the workshop, you may not be an R ninja, but you will be able to do basic data analysis and visualization.  Furthermore, you should have the tools and confidence to teach yourself new analyses in the future. 
+
