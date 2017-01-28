@@ -4,7 +4,7 @@ title: "dplyr and ggplot2 challenge"
 
 ### Break into groups of 2 and complete the challenge
 
-* Install the babynames package, and load it
+* Install the `babynames` package, and load it
 * Recreate the graph below for your own name
 
 ```{r message=F, warning=F, echo=F}
