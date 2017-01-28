@@ -3,8 +3,13 @@
 
 ## Datasets
 
+These files are for educational purposes only for learning data analysis. In some cases, they are taken from published papers. The copies of the datasets on this website could contain errors in transcription. Always look to the original source and cite the original paper.
+
+Note: files have .txt extension so that they render in the broswer, but may use tab characters (‘\t’) or commas as column separators.
+
 name  | source
 ---------------|-----------------
-[femur_lengths](/datasets/femur_lengths.txt) | fake data
+[femur_lengths.txt](/datasets/femur_lengths.txt) | fake data
 `babynames` | built in dataset, data from Social Security Administration
 [barr_astrag_2014.txt](/datasets/barr_astrag_2014.txt) | [Barr, 2014](http://dx.doi.org/10.1002/jmor.20279)
+[DMV_2014_Q3_Undergrad_DirectLoans.txt](/datasets/DMV_2014_Q3_Undergrad_DirectLoans.txt) | from [data.gov](http://data.gov)
