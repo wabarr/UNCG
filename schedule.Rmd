@@ -8,11 +8,9 @@
     *  [Intro to R](/presentations/intro2R.html)
     *  [Using functions - basic statistical tests]()
 *  Thursday Afternoon
-    *  Graphics
-        *  [base]()
-        *  [ggplot2]()
+    *  [Data Visualization](/presentations/visualization.html)
 *  Friday Morning
-    *  dplyr
+    *  data
     *  [dplyr & ggplot challenge](babynames.html)
     
 *  Friday Afternoon
