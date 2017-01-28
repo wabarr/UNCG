@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Schedule"
+      href: schedule.html 
     - text: "Data"
       href: datasets.html
 output:

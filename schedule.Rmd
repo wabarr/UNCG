@@ -1,0 +1,19 @@
+---
+---
+
+## Schedule
+
+
+*  Thursday Morning
+    *  [Intro to R](/presentations/intro2R.html)
+    *  [Using functions - basic statistical tests]()
+*  Thursday Afternoon
+    *  Graphics
+        *  [base]()
+        *  [ggplot2]()
+*  Friday Morning
+    *  dplyr
+    *  [dplyr & ggplot challenge](babynames.html)
+    
+*  Friday Afternoon
+    *  Comparative methods

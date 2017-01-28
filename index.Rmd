@@ -1,14 +1,5 @@
 ---
+output: html_document
 ---
 
-## Schedule
-
-Session | Activity
------------------|------------
-Thursday Morning|[Intro to R](/presentations/intro2R.html)
-Thursday Afternoon | ggplot2 
-Thursday Afternoon | dplyr 
-Thursday Afternoon | [dplyr & ggplot challenge](babynames.html)
-Friday Morning | linear modeling 
-Friday Afternoon | PGLS 
-
+## Welcome to the workshop
