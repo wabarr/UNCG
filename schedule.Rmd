@@ -6,7 +6,9 @@
 
 *  Thursday Morning
     *  [Intro to R](/presentations/intro2R.html)
-    *  [Using functions - basic statistical tests]()
+    *  Using functions - basic statistical tests
+        *  `iris` dataset
+            *    
 *  Thursday Afternoon
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
@@ -15,4 +17,4 @@
     *  [dplyr & ggplot challenge](babynames.html)
     
 *  Friday Afternoon
-    *  Comparative methods
+    *  [Comparative methods](/presentations/comparative_methods.html)
