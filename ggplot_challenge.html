@@ -11,7 +11,7 @@
 
 
 
-<title>ggplot challenge</title>
+<title>ggplot challenges</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -197,19 +197,37 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">ggplot challenge</h1>
+<h1 class="title toc-ignore">ggplot challenges</h1>
 
 </div>
 
 
-<div id="break-into-groups-of-2-to-complete-the-challenge" class="section level2">
-<h2>Break into groups of 2 to complete the challenge</h2>
-<p>Install the <code>fivethirtyeight</code> package and load it using the <code>library()</code> function</p>
-<div id="recreate-the-following-plot-using-this-dataset-of-astragalus-measurements-of-antelopes" class="section level3">
-<h3>Recreate the following plot using <a href="http://uncg.rstats.ninja/datasets/barr_astrag_2014.txt">this dataset</a> of astragalus measurements of antelopes</h3>
+<div id="challenge-1" class="section level3">
+<h3>Challenge 1</h3>
+<p>Recreate the following plot using <a href="http://uncg.rstats.ninja/datasets/barr_astrag_2014.txt">this dataset</a> of astragalus measurements of antelopes</p>
 <pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.3.2</code></pre>
 <p><img src="ggplot_challenge_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
+<div id="recreate-this-figure" class="section level2">
+<h2>Recreate this figure</h2>
+<p>This one requires a bit more data wrangling.</p>
+<p>First read in <a href="http://uncg.rstats.ninja/datasets/FY_2015_refugees_receiving_services.txt">this dataset</a> on the number of refugees receiving resettlement services in all 50 states.</p>
+<p>Next read in this <a href="http://uncg.rstats.ninja/datasets/US_state_populations.tx">additional dataset</a> on state population estimates for 2016.</p>
+<p>Use the <code>merge()</code> function to merge the two dataframes.</p>
+<p>Now recreate this figure below (you will first have to calculate a new <code>totalrefugees</code> column.)</p>
+<pre class="r"><code>refugee &lt;- read.table(&quot;http://uncg.rstats.ninja/datasets/FY_2015_refugees_receiving_services.txt&quot;, header=T, sep=&quot;,&quot;)
+pops &lt;- read.table(&quot;http://uncg.rstats.ninja/datasets/US_state_populations.txt&quot;, header=T, sep=&quot;,&quot;)
+pops$STATE &lt;- toupper(pops$STATE)
+refugee &lt;- merge(refugee, pops)
+
+refugee$totalrefugees &lt;- 
+  rowSums(refugee[,!names(refugee) %in% c(&quot;STATE&quot;,&quot;population_2016&quot;)])
+refugee$STATE &lt;- factor(refugee$STATE, levels=refugee$STATE[order(refugee$total/refugee$population_2016)],ordered = T)
+ggplot(refugee, aes(x=totalrefugees/population_2016, y=STATE)) + 
+  geom_point() +
+  labs(title=&quot;number of settled refugees per capita&quot;, x=&quot;refugees per capita&quot;) +
+  theme_bw(12) </code></pre>
+<p><img src="ggplot_challenge_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
 
 
