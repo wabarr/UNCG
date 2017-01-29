@@ -18,7 +18,7 @@ ggplot(subset(astrag, Habitat %in% c("F", "HC", "LC", "O")), aes(B,DistRad, colo
   labs(title="Astragalar Dimensions by Habitat")
 ```
 
-## Recreate this figure
+### Challenge 2
 
 This one requires a bit more data wrangling. 
 
@@ -30,7 +30,7 @@ Use the `merge()` function to merge the two dataframes.
 
 Now recreate this figure below (you will first have to calculate a new `totalrefugees` column.)
 
-```{r fig.height=6}
+```{r fig.height=7}
 refugee <- read.table("http://uncg.rstats.ninja/datasets/FY_2015_refugees_receiving_services.txt", header=T, sep=",")
 pops <- read.table("http://uncg.rstats.ninja/datasets/US_state_populations.txt", header=T, sep=",")
 pops$STATE <- toupper(pops$STATE)
