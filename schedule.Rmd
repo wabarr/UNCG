@@ -6,15 +6,17 @@
 
 *  Thursday Morning
     *  [Intro to R](/presentations/intro2R.html)
-    *  Using functions - basic statistical tests
-        *  `iris` dataset
-            *    
+    *  The general linear model - `iris` dataset
+        *  regression
+        *  ANOVA
+        *  ANCOVA
 *  Thursday Afternoon
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
 *  Friday Morning
-    *  data
+    *  dplyr
     *  [dplyr & ggplot challenge](babynames.html)
+    *  PCA
     
 *  Friday Afternoon
     *  [Comparative methods](/presentations/comparative_methods.html)
