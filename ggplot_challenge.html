@@ -215,18 +215,6 @@ $(document).ready(function () {
 <p>Next read in this <a href="http://uncg.rstats.ninja/datasets/US_state_populations.tx">additional dataset</a> on state population estimates for 2016.</p>
 <p>Use the <code>merge()</code> function to merge the two dataframes.</p>
 <p>Now recreate this figure below (you will first have to calculate a new <code>totalrefugees</code> column.)</p>
-<pre class="r"><code>refugee &lt;- read.table(&quot;http://uncg.rstats.ninja/datasets/FY_2015_refugees_receiving_services.txt&quot;, header=T, sep=&quot;,&quot;)
-pops &lt;- read.table(&quot;http://uncg.rstats.ninja/datasets/US_state_populations.txt&quot;, header=T, sep=&quot;,&quot;)
-pops$STATE &lt;- toupper(pops$STATE)
-refugee &lt;- merge(refugee, pops)
-
-refugee$totalrefugees &lt;- 
-  rowSums(refugee[,!names(refugee) %in% c(&quot;STATE&quot;,&quot;population_2016&quot;)])
-refugee$STATE &lt;- factor(refugee$STATE, levels=refugee$STATE[order(refugee$total/refugee$population_2016)],ordered = T)
-ggplot(refugee, aes(x=totalrefugees/population_2016, y=STATE)) + 
-  geom_point() +
-  labs(title=&quot;number of settled refugees per capita&quot;, x=&quot;refugees per capita&quot;) +
-  theme_bw(12) </code></pre>
 <p><img src="ggplot_challenge_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
 

@@ -30,7 +30,7 @@ Use the `merge()` function to merge the two dataframes.
 
 Now recreate this figure below (you will first have to calculate a new `totalrefugees` column.)
 
-```{r fig.height=7}
+```{r fig.height=7, echo=F}
 refugee <- read.table("http://uncg.rstats.ninja/datasets/FY_2015_refugees_receiving_services.txt", header=T, sep=",")
 pops <- read.table("http://uncg.rstats.ninja/datasets/US_state_populations.txt", header=T, sep=",")
 pops$STATE <- toupper(pops$STATE)
