@@ -66,7 +66,7 @@ arrange(loans, State, desc(SubsidizedDL))
 
 ## `select()`
 
-This function pulls out colums of interest.  You can select ranges of columns using the `:` operator syntax. (Note: usually this only works with numeric data, but this is a special usage defined in the `dplyr` package)
+This function pulls out columns of interest.  You can select ranges of columns using the `:` operator syntax. (Note: usually this only works with numeric data, but this is a special usage defined in the `dplyr` package)
 
 ```{r}
 select(loans, State, SubsidizedDL)
@@ -93,7 +93,7 @@ mutate(loans, Total_Loans = SubsidizedDL + UNSubsidizedDL)
 
 ## `rowwise()`
 
-Mutate works as expected when you want to manupulate whole columns at once, but sometimes you want to do something on a row-by-row basis.
+Mutate works as expected when you want to manipulate whole columns at once, but sometimes you want to do something on a row-by-row basis.
 
 For example: this code doesn't work as you might expect
 
@@ -134,7 +134,7 @@ summarise(groupedLoans, meanSubDL = mean(SubsidizedDL, na.rm=TRUE))
 
 ## Chaining operations
 
-`dplyr` also provides a way of chaining together commplicated operations with the `%>%` operator.
+`dplyr` also provides a way of chaining together complicated operations with the `%>%` operator.
 
 This prevents having to save intermediate steps, or to have a complicated series of nested functions.
 
