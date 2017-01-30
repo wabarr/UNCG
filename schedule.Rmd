@@ -14,7 +14,7 @@
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
 *  Friday Morning
-    *  dplyr
+    *  [dplyr](/presentations/dplyr.html)
     *  [dplyr & ggplot challenge](babynames.html)
     *  PCA
     
