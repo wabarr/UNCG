@@ -13,10 +13,12 @@
 *  Thursday Afternoon
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
+    *  Make your own graphs using data you brought. Ask me anything......
 *  Friday Morning
     *  [dplyr](/presentations/dplyr.html)
     *  [dplyr & ggplot challenge](babynames.html)
-    *  PCA
+    *  Principal Components Analysis
     
 *  Friday Afternoon
     *  [Comparative methods](/presentations/comparative_methods.html)
+    *  Analyze data you brought. Ask me anything......
