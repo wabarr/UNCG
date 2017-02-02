@@ -1,0 +1,7 @@
+---
+title: "GLM"
+output: html_document
+---
+
+## General Linear Modeling
+

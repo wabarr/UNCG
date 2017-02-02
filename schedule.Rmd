@@ -6,14 +6,14 @@
 
 *  Thursday Morning
     *  [Intro to R](/presentations/intro2R.html)
-    *  The general linear model - `iris` dataset
-        *  regression
-        *  ANOVA
-        *  ANCOVA
+    *  Workflow.....using R markdown
+    *  [The general linear model - `iris` dataset: regression, ANOVA, ANCOVA](/presentations/glm.html)
 *  Thursday Afternoon
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
+    *  [Spatial data](/presentations/spatial.html)
     *  Make your own graphs using data you brought. Ask me anything......
+    
 *  Friday Morning
     *  [dplyr](/presentations/dplyr.html)
     *  [dplyr & ggplot challenge](babynames.html)
