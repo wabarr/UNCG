@@ -119,5 +119,92 @@ You can do almost anything in R that you can do in ArcGIS.
 
 This is accomplished through additional packages, notably `rgdal` which is an R interface to the Geospatial Data Abstraction Library (GDAL), which is a great piece of open source software for spatial analysis. GDAL is the brains behind QGIS. 
 
-The `spatstats` package also implements a variety of spatial statitics. 
+The `raster` package deals with geospatial raster data, relying heavily on GDAL, as well.
+
+The `spatstats` package implements a variety of spatial statitics. 
+
+## `rgdal`
+
+`rgdal` can read in most any vector data
+
+The `readOGR()` function reads in vector data
+
+```{r message=F}
+library(rgdal)
+africa <- readOGR("/Users/wabarr/Dropbox/UNCG-workshop/datasets/spatial/africa_simple.shp",
+                  layer="africa_simple")
+```
+## `rgdal` 
+
+spatial data can be plotted with the base R `plot()` function
+
+```{r}
+plot(africa, col='maroon')
+```
+
+## `raster` package
+
+```{r message=F, cache=T}
+library(raster)
+landCover <- raster("/Users/wabarr/Dropbox/UNCG-workshop/datasets/spatial/africa_landcover.tif")
+plot(landCover)
+```
+
+## projections
+
+```{r}
+proj4string(landCover)
+proj4string(africa)
+```
+
+Notice that the africa shapefile is in a different projection (Eckert VI equal area) rather than latitude / longitude, which is the most common coordinate system you will see
+
+## reprojecting
+
+You can reproject vector data with `sp::spTransform()`
+
+You can reproject raster data with `raster::projectRaster()`
+
+## reprojecting
+
+Let's reproject the `africa` shapefile into lat/lon coordinates
+
+```{r}
+africaLatLon <- spTransform(africa, proj4string(landCover))
+```
+
+## plot together
+
+Now that they are in the same coordinate system we can plot them together
+
+```{r cache=T}
+plot(landCover)
+plot(africaLatLon, add=T, border="purple", lwd=5)
+```
+
+## mask raster with shapefile
+
+```{r cache=T}
+maskedLandCover <- raster::mask(landCover, africaLatLon)
+plot(maskedLandCover)
+```
+
+## load in some point data
+
+```{r cache=T}
+sites <- read.table("/Users/wabarr/Dropbox/UNCG-workshop/datasets/spatial/africanSites.txt", 
+                    header=T, sep="\t")
+sitesSP <- SpatialPointsDataFrame(coords=sites[,1:2], data=sites["siteID"])
+plot(maskedLandCover)
+plot(sitesSP, add=T, pch=16, col="blue")
+```
+
+
+## buffers
+
+Make 1 degree buffers using the `rgeos:gBuffer
+
+```{r}
+rgeos::gBuffer(sitesSP, byid = T, width=1)
+```
 
