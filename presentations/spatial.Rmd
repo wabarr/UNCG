@@ -129,6 +129,8 @@ The `spatstats` package implements a variety of spatial statitics.
 
 The `readOGR()` function reads in vector data
 
+First, download the shapefile from http://uncg.rstats.ninja/datasets/spatial/africa_simple.shp.zip.  Then uncompress the file. 
+
 ```{r message=F}
 library(rgdal)
 africa <- readOGR("/Users/wabarr/Dropbox/UNCG-workshop/datasets/spatial/africa_simple.shp",
@@ -143,6 +145,8 @@ plot(africa, col='maroon')
 ```
 
 ## `raster` package
+
+First, download the raster from http://uncg.rstats.ninja/datasets/spatial/africa_landcover.tif
 
 ```{r message=F, cache=T}
 library(raster)
@@ -192,7 +196,7 @@ plot(maskedLandCover)
 ## load in some point data
 
 ```{r cache=T}
-sites <- read.table("/Users/wabarr/Dropbox/UNCG-workshop/datasets/spatial/africanSites.txt", 
+sites <- read.table("http://uncg.rstats.ninja/datasets/spatial/africanSites.txt", 
                     header=T, sep="\t")
 sitesSP <- SpatialPointsDataFrame(coords=sites[,1:2], data=sites["siteID"])
 plot(maskedLandCover)
