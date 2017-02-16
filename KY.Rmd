@@ -1,0 +1,29 @@
+---
+title: "KY"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+
+## Map of KY
+
+```{r}
+library(ggplot2)
+library(maps)
+ky <- read.table("http://uncg.rstats.ninja/datasets/spatial/KY_cities.txt", header=T, sep=",")
+ky_map <- map(database="state", region="Kentucky", plot=F)
+kygg <- data.frame(lon=ky_map$x, lat=ky_map$y)
+library(ggplot2)
+ggplot(kygg, aes(lon, lat)) + 
+  geom_path() + 
+  geom_point(data=ky, aes(x=lon, y=lat, size=Population), alpha=0.8, color="blue") + 
+  geom_text(data=dplyr::filter(ky, Population > 20000), aes(label=City)) + 
+  theme_bw() 
+
+```
+
+```{r}
+ggplot(ky, aes(log(Population), log(Area_sq_mile))) + 
+  geom_point(aes(color=County))
+```

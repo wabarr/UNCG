@@ -11,16 +11,16 @@
 
 
 
-<title></title>
+<title>KY</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -66,7 +66,6 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
 
 </head>
 
@@ -98,34 +97,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 61px;
+  padding-top: 51px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 
 .section h2 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h3 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h4 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h5 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h6 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 </style>
 
@@ -197,39 +196,31 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">KY</h1>
 
 </div>
 
 
-<div id="schedule" class="section level2">
-<h2>Schedule</h2>
-<ul>
-<li>Thursday Morning
-<ul>
-<li>Goals of workshop. What is R?</li>
-<li><a href="/presentations/intro2R.html">Intro to R</a></li>
-<li>Workflow…..using R markdown</li>
-<li><a href="/presentations/glm.html">The general linear model - <code>iris</code> dataset: regression, ANOVA, ANCOVA</a></li>
-</ul></li>
-<li>Thursday Afternoon
-<ul>
-<li><a href="/presentations/visualization.html">Data Visualization</a></li>
-<li><a href="ggplot_challenge.html">ggplot challenge</a></li>
-<li><a href="/presentations/spatial.html">Spatial data</a></li>
-<li>Make your own graphs using data you brought. Ask me anything……</li>
-</ul></li>
-<li>Friday Morning
-<ul>
-<li><a href="/presentations/dplyr.html">dplyr</a></li>
-<li><a href="babynames.html">dplyr &amp; ggplot challenge</a></li>
-<li>Principal Components Analysis</li>
-</ul></li>
-<li>Friday Afternoon
-<ul>
-<li><a href="/presentations/comparative_methods.html">Comparative methods</a></li>
-<li>Analyze data you brought. Ask me anything……</li>
-</ul></li>
-</ul>
+<div id="map-of-ky" class="section level2">
+<h2>Map of KY</h2>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(maps)
+ky &lt;- read.table(&quot;http://uncg.rstats.ninja/datasets/spatial/KY_cities.txt&quot;, header=T, sep=&quot;,&quot;)
+ky_map &lt;- map(database=&quot;state&quot;, region=&quot;Kentucky&quot;, plot=F)
+kygg &lt;- data.frame(lon=ky_map$x, lat=ky_map$y)
+library(ggplot2)
+ggplot(kygg, aes(lon, lat)) + 
+  geom_path() + 
+  geom_point(data=ky, aes(x=lon, y=lat, size=Population), alpha=0.8, color=&quot;blue&quot;) + 
+  geom_text(data=dplyr::filter(ky, Population &gt; 20000), aes(label=City)) + 
+  theme_bw() </code></pre>
+<pre><code>## Warning: Removed 11 rows containing missing values (geom_point).</code></pre>
+<p><img src="KY_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(ky, aes(log(Population), log(Area_sq_mile))) + 
+  geom_point(aes(color=County))</code></pre>
+<pre><code>## Warning: Removed 13 rows containing missing values (geom_point).</code></pre>
+<p><img src="KY_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
 
 

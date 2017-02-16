@@ -5,6 +5,7 @@
 
 
 *  Thursday Morning
+    *  Goals of workshop.  What is R?
     *  [Intro to R](/presentations/intro2R.html)
     *  Workflow.....using R markdown
     *  [The general linear model - `iris` dataset: regression, ANOVA, ANCOVA](/presentations/glm.html)
