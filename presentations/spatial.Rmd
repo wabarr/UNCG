@@ -206,7 +206,7 @@ plot(sitesSP, add=T, pch=16, col="blue")
 
 ## buffers
 
-Make 1 degree buffers using the `rgeos:gBuffer
+Make 1 degree buffers using the `rgeos:gBuffer()` function
 
 ```{r}
 rgeos::gBuffer(sitesSP, byid = T, width=1)
