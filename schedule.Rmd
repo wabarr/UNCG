@@ -19,6 +19,7 @@
     *  [dplyr](/presentations/dplyr.html)
     *  [dplyr & ggplot challenge](babynames.html)
     *  Principal Components Analysis
+    *  [PCA Challenge](/presentations/PCA_challenge.html)
     
 *  Friday Afternoon
     *  [Comparative methods](/presentations/comparative_methods.html)

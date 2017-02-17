@@ -1,5 +1,7 @@
 ---
-output: html_notebook
+output:
+  html_document: default
+  html_notebook: default
 ---
 
 ## Principal Components Analysis
@@ -11,7 +13,7 @@ output: html_notebook
 *  Make a plot of PC1 against PC2, and another of PC2 against PC3
 *  Examine the loadings of the PCA, and interpret the plot.  What to the various axes mean, and what do they tell you about the alcohol consumption of the various countries?
 
-```{r echo=F}
+```{r echo=F, include=F}
 library(fivethirtyeight)
 PCA <- prcomp(drinks[,c(2,3,4)], center = T, scale=T)
 
