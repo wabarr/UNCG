@@ -8,7 +8,7 @@
     *  Goals of workshop.  What is R?
     *  [Intro to R](/presentations/intro2R.html)
     *  Workflow.....using R markdown
-    *  [The general linear model - `iris` dataset: regression, ANOVA, ANCOVA](/presentations/glm.html)
+    *  [Correlation and Regression](http://hompal-stats.wabarr.com/presentations/regression/regression.html) - [ANOVA and ANCOVA](http://hompal-stats.wabarr.com/presentations/ANOVA/ANOVA.html)
 *  Thursday Afternoon
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
