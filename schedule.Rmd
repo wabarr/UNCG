@@ -13,14 +13,14 @@
     *  [Data Visualization](/presentations/visualization.html)
     *  [ggplot challenge](ggplot_challenge.html)
     *  [Spatial data](/presentations/spatial.html)
-    *  Make your own graphs using data you brought. Ask me anything......
+    *  Make your own graphs using data you brought. Ask me anything.......
     
 *  Friday Morning
     *  [dplyr](/presentations/dplyr.html)
     *  [dplyr & ggplot challenge](babynames.html)
     *  Principal Components Analysis
     *  [PCA Challenge](/presentations/PCA_challenge.html)
-    
+     
 *  Friday Afternoon
     *  [Comparative methods](/presentations/comparative_methods.html)
     *  Analyze data you brought. Ask me anything......
